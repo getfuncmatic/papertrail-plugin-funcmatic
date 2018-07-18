@@ -1,2 +1,1 @@
-// logs2.papertrailapp.com:52126
-
+module.exports = require('./lib/papertrail')

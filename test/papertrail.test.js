@@ -1,7 +1,7 @@
 var Funcmatic = require('@funcmatic/funcmatic')
 var PapertrailPlugin = require('../lib/papertrail')
 
-var handler = Funcmatic.wrap(async (event, { papertrail }) => {
+var handler = Funcmatic.wrap(async (event, context, { papertrail }) => {
   console.log("consoleOnly", papertrail.consoleOnly) 
   var message = 'this is my message to papertrail'
   if (papertrail.consoleOnly) {
@@ -17,6 +17,9 @@ var handler = Funcmatic.wrap(async (event, { papertrail }) => {
 describe('Request', () => {
   beforeEach(() => {
     Funcmatic.clear()
+  })
+  afterAll(() => {
+    
   })
   it ('should send a papertrail log event', async () => {
     Funcmatic.use(PapertrailPlugin, { 
