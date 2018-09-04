@@ -1,0 +1,6 @@
+TODO:
+
+* Update to dotenv format
+* Update and publish to Funcmatic 2.0 plugin format
+* Update so that requestid and such are set up in papertrail client so that requests are grouped in papertrail UI
+
