@@ -36,19 +36,22 @@ describe('Request', () => {
       papertrail.info("this message should NOT be logged to papertrail")
     })
   })
+  it ('should log using a given appName and functionName', async () => {
+    funcmatic.use(PapertrailPlugin, {
+      host: process.env.PAPERTRAIL_HOST,
+      port: process.env.PAPERTRAIL_PORT,
+      appName: 'bigfiles-api',
+      functionName: 'funcmatic-cli-test-2'
+    })
+    var event = { }
+    var context = { 
+      "awsRequestId": "cf657dbb-ae58-11e8-ab9f-8328009a7b9d", 
+      "functionName": "50c85c59-9f7f-4bec-afa0-94e6a96acda3", 
+      "functionVersion": 21
+    }
+    funcmatic.invoke(event, context, async (event, context, { papertrail }) => {
+      papertrail.info("should be logged with papertrail hostname and program based on request context")
+      papertrail.error("error message")
+    })
+  })
 })
-
-
-
-// var handler = Funcmatic.wrap(async (event, context, { papertrail }) => {
-//   console.log("consoleOnly", papertrail.consoleOnly) 
-//   var message = 'this is my message to papertrail'
-//   if (papertrail.consoleOnly) {
-//     message = 'this is my message to console only'
-//   } 
-//   papertrail.info(message)
-
-//   return {
-//     statusCode: 200
-//   }
-// })

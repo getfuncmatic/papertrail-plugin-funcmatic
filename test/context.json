@@ -1,0 +1,11 @@
+{
+  "awsRequestId": "cf657dbb-ae58-11e8-ab9f-8328009a7b9d", 
+  "callbackWaitsForEmptyEventLoop": true, 
+  "functionName": "50c85c59-9f7f-4bec-afa0-94e6a96acda3", 
+  "functionVersion": 21, 
+  "invokedFunctionArn": "arn:aws:lambda:us-west-2:233748856986:function:50c85c59-9f7f-4bec-afa0-94e6a96acda3:DEV", 
+  "invokeid": "cf657dbb-ae58-11e8-ab9f-8328009a7b9d", 
+  "logGroupName": "/aws/lambda/50c85c59-9f7f-4bec-afa0-94e6a96acda3", 
+  "logStreamName": "2018/09/02/[21]485bc95329fd40a7a002d6f1c45fd65a", 
+  "memoryLimitInMB": 512
+}

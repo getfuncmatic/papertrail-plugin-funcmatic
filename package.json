@@ -1,6 +1,6 @@
 {
   "name": "@funcmatic/papertrail-plugin",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Papertrail Winston logger for the Funcmatic Lambda JS Framework",
   "main": "index.js",
   "scripts": {
